@@ -106,7 +106,7 @@ To run tests, run the following command:
 
 ### Deployment
 
-I have deployed this project using: render
+I have deployed this project using: [Netlify](https://www.netlify.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
