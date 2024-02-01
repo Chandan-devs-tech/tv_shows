@@ -1,14 +1,13 @@
-import React from "react";
 import logo from "../assets/tvm_logo.png";
 const Navbar = () => {
   return (
     <header>
-      <nav className="flex justify-between items-center text-4xl px-16 py-3">
+      <nav className="flex lg:justify-between md:justify-between items-center sm:justify-center text-4xl px-16 py-3">
         <a href="/">
-          <img src={logo} className="w-40" alt="logo" />
+          <img src={logo} className="lg:w-40" alt="logo" />
         </a>
-        <p className="font-bold">TVMaze Shows</p>
-        <div className="flex gap-3">
+        <p className="font-bold hidden sm:block">TVMaze Shows</p>
+        <div className="lg:flex md:flex gap-3 hidden sm:block">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="icon icon-tabler icon-tabler-microphone"
@@ -49,4 +48,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar
+export default Navbar;
