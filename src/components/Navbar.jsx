@@ -1,11 +1,11 @@
 import React from "react";
-
+import logo from "../assets/tvm_logo.png";
 const Navbar = () => {
   return (
     <header>
       <nav className="flex justify-between items-center text-4xl px-16 py-3">
         <a href="/">
-          <img src="src/assets/tvm_logo.png" className="w-40" alt="logo" />
+          <img src={logo} className="w-40" alt="logo" />
         </a>
         <p className="font-bold">TVMaze Shows</p>
         <div className="flex gap-3">
