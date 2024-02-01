@@ -66,7 +66,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://tvshows-8xz3.onrender.com/)
+- [Live Demo Link](https://tv-serials.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
