@@ -6,7 +6,7 @@ const Navbar = () => {
       <nav className="flex justify-between items-center text-4xl px-16 py-3">
         <a href="/">
           <img
-            src="./src/assets/tvm-header-logo.png"
+            src="src/assets/tvm-header-logo.png"
             className="w-40"
             alt="logo"
           />
