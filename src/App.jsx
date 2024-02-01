@@ -1,7 +1,11 @@
+import Home from "./components/Home";
+import Navbar from "./components/navbar";
+
 function App() {
   return (
     <>
-      <h1 className="text-center text-blue-500 font-bold">TV MAZE</h1>
+      <Navbar />
+      <Home />
     </>
   );
 }
