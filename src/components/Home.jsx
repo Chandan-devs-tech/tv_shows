@@ -2,15 +2,32 @@ import { useEffect, useState } from "react";
 
 const Home = () => {
   const [shows, setShows] = useState([]);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
-    fetch("https://api.tvmaze.com/search/shows?q=all")
-      .then((response) => response.json())
-      .then((data) => setShows(data));
-  }, []);
+    if (search === "") {
+      fetch("https://api.tvmaze.com/search/shows?q=all")
+        .then((response) => response.json())
+        .then((data) => setShows(data));
+    } else {
+      fetch(`https://api.tvmaze.com/search/shows?q=${search}`)
+        .then((response) => response.json())
+        .then((data) => setShows(Array.isArray(data) ? data : []));
+    }
+  }, [search]);
+
   return (
     <div>
-      <div className="flex justify-evenly flex-wrap gap-6">
+      <div className="bg-teal-500 text-center p-3">
+        <input
+          type="text"
+          placeholder="Search Shows"
+          className="lg:w-96 rounded-xl p-2 outline-none"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+      </div>
+      <div className="flex justify-evenly flex-wrap gap-6 bg-teal-500">
         {shows.map((show, index) => {
           return (
             <div
@@ -53,4 +70,4 @@ const Home = () => {
   );
 };
 
-export default Home
+export default Home;
