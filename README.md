@@ -96,17 +96,17 @@ Clone this repository to your desired folder:
 
 Install this project with:
 
-  - cd react-capstone-tvmaze
+  - cd tv_shows
   - npm install
 
 ### Run tests
 
 To run tests, run the following command:
-- npm run test
+- npm run dev
 
 ### Deployment
 
-I have deployed this project using: render
+I have deployed this project using: [Netlify](https://www.netlify.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
