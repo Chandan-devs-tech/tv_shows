@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [shows, setShows] = useState([]);
@@ -40,7 +41,7 @@ const Home = () => {
                   src={show.show.image?.medium}
                   alt={show.show.name}
                 />
-                <div>
+                <Link to={`/details/${show.show.id}`}>
                   <button className="bg-white rounded-full absolute bottom-2 mb-2 right-4 p-2">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +61,7 @@ const Home = () => {
                       <path d="M15 8l4 4" />
                     </svg>
                   </button>
-                </div>
+                </Link>
               </div>
             </div>
           );
