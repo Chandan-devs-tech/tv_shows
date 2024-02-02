@@ -1,7 +1,16 @@
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import Details from "./components/Details";
+
 function App() {
   return (
     <>
-      <h1 className="text-center text-blue-500 font-bold">TV MAZE</h1>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/details/:id" element={<Details />} />
+      </Routes>
     </>
   );
 }
