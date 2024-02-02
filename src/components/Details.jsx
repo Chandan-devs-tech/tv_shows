@@ -7,10 +7,26 @@ const Details = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`https://api.tvmaze.com/shows/${id}`)
-      .then((response) => response.json())
-      .then((data) => setShowDetails(data));
-  }, [id]);
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`https://api.tvmaze.com/shows/${id}`);
+        const data = await response.json();
+        setShowDetails(data);
+        localStorage.setItem(`showDetails_${id}`, JSON.stringify(showDetails));
+      } catch (error) {
+        console.error("Error fetching show details", error);
+      }
+    };
+
+    const showDetailsFromLocalStorage = JSON.parse(
+      localStorage.getItem(`showDetails_${id}`)
+    );
+    if (showDetailsFromLocalStorage) {
+      setShowDetails(showDetailsFromLocalStorage);
+    } else {
+      fetchData();
+    }
+  }, [showDetails, id]);
 
   if (!showDetails) {
     return (
