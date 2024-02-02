@@ -95,11 +95,11 @@ const Details = () => {
         />
       </div>
       <div className="lg:px-24 px-4 py-4 w-full">
-        <p className="text-2xl lg:text-5xl">
+        <p className="text-3xl lg:text-5xl">
           {showDetails.name}&apos;s details:
         </p>
       </div>
-      <div className="flex justify-start w-full flex-col lg:px-32 lg:py-4">
+      <div className="flex justify-start w-full flex-col lg:px-32 lg:py-4 text-lg lg:text-xl">
         <ul className="lg:p-4">
           <li className="py-2 lg:px-8 px-2 flex justify-between bg-teal-500">
             <span>Name: </span>
